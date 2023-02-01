@@ -1,10 +1,5 @@
-const hasValuesFromArray = (set, array) => {
-  for (const item of array) {
-    if (!set.has(item)) {
-      return false;
-    }
-  }
-  return true;
-};
-
-export default hasValuesFromArray
+export default function hasValuesFromArray(set, array) {
+  // const values = Array.from(set);
+  // return array.every((item) => values.includes(item));
+  return array.every((item) => set.has(item));
+}
